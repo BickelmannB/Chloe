@@ -1,0 +1,37 @@
+class FormationsController < ApplicationController
+  def index
+    @formations = Formation.all
+  end
+
+  def new
+    @formation = Formation.new
+  end
+
+  def create
+    @formation = Formation.create(formation_params)
+  end
+
+  def show
+    @formation = Formation.find(params[:id])
+  end
+
+  def edit
+    @formation = Formation.find(params[:id])
+  end
+
+  def update
+    @formation = Formation.find(params[:id])
+    @formation.update(formation_params)
+  end
+
+  def destroy
+    @formation = Formation.find(params[:id])
+    @formation.destroy
+  end
+end
+
+private
+
+def formation_params
+  params.require(:formation).permit(:name, :description, :photo)
+end

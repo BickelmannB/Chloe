@@ -1,1 +1,20 @@
 // Specific CSS for your home-page
+.fit-picture {
+    width: 200px;
+}
+
+.vertical-center {
+  min-height: 75%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 75vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.custom-padding {
+  padding: 85px;
+}
+
+#cont {
+  background-color: #FFFFFF;
+}
