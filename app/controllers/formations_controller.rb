@@ -9,6 +9,7 @@ class FormationsController < ApplicationController
 
   def create
     @formation = Formation.create(formation_params)
+    redirect_to formation_path(@formation)
   end
 
   def show
