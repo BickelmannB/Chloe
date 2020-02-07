@@ -1,14 +1,14 @@
- <div class="container text-center mt-5"> <h1>Nos Formations</h1> </div>
-<div class="container center border border-solid border-black rounded" id="cont-index">
-  <div class="container cards custom-padding">
-    <% @formations.each do |f| %>
-    <a href="<%= formation_path(f) %>" style= text-decoration:none;>
-      <% if f.photo.attached? %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path f.photo.key %>')">
-        <%= f.name.capitalize %>
-      </div>
-      <% end %>
-    </a>
+<div class="container text-center mb-3 title-style">
+  <b>Nos formations</b>
+</div>
+<div class="container cards">
+  <% @formations.each do |f| %>
+  <a href="<%= formation_path(f) %>" style= text-decoration:none;>
+    <% if f.photo.attached? %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path f.photo.key %>')">
+      <%= f.name.capitalize %>
+    </div>
     <% end %>
-  </div>
+  </a>
+  <% end %>
 </div>

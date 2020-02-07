@@ -1,14 +1,14 @@
- <div class="container text-center mt-5"> <h1>Notre Equipe</h1> </div>
-<div class="container center border border-solid border-black rounded" id="cont-index">
-  <div class="container cards custom-padding">
+<div class="container text-center mb-3 title-style">
+  <b>Notre equipe</b>
+</div>
+  <div class="container d-flex justify-content-center">
     <% @profils.each do |p| %>
     <% if p.photo.attached? %>
     <a href="<%= profil_path(p) %>" style= text-decoration:none;>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path p.photo.key %>')">
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path p.photo.key; %>')">
         <%= p.name.capitalize %>
       </div>
       <% end %>
     </a>
     <% end %>
   </div>
-</div>
