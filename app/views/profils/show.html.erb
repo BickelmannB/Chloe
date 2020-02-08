@@ -1,5 +1,15 @@
-<%= @profil.name %>
-<%= @profil.description %>
-<% if @profil.photo.attached? %>
-<%= cl_image_tag @profil.photo.key, height: 300, width: 400, crop: :fill %>
-<% end %>
+<div class="vertical-center">
+  <div class="row justify-content-around">
+    <div class="col-sm-8 text-center"><b><%= @profil.name.capitalize %></b><br><br>
+      <div><%= @profil.description %>
+      </div><br><br>
+            <div class="d-flex justify-content-around">
+        <a href="#" class="btn btn-ghost btn-lg active" role="button" aria-pressed="true">Contactez-nous</a>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <%= cl_image_tag @profil.photo.key, width: 300, height: 400, crop: :fill %>
+    </div>
+  </div>
+</div>
+
