@@ -22,6 +22,7 @@ class ProfilsController < ApplicationController
   def update
     @profil = Profil.find(params[:id])
     @profil.update(profil_params)
+    redirect_to profil_path(@profil)
   end
 
   def destroy
@@ -30,8 +31,16 @@ class ProfilsController < ApplicationController
   end
 end
 
+def contact
+  @profil = params[:profil]
+  @email = params[:email]
+  @telephone = params[:telephone]
+  @demande = params[:demande]
+  mail(to: @profil.email, subject: "Nouvelle demande d'information")
+end
+
 private
 
 def profil_params
-  params.require(:profil).permit(:name, :description, :photo)
+  params.require(:profil).permit(:name, :description, :photo, :email)
 end

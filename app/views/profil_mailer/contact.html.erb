@@ -1,5 +1,11 @@
-<h1>Profil#contact</h1>
+<h1>Bonjour <%= @profil.name.capitalize %></h1>
 
 <p>
-  <%= @profil.name %>, find me in app/views/profil_mailer/contact.html.erb
+  Une nouvelle demande vient d'arriver, et voici ce qu'elle contient : <br>
+
+  <b> Email de l'expediteur : <%= @email %> </b> <br>
+<% if @telephone %>
+<b> Téléphone de l'expediteur : <%= @telephone %> </b> <br>
+<% end %>
+<b> Demande : <%= @demande %></b>
 </p>

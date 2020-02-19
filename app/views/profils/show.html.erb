@@ -1,10 +1,10 @@
 <div class="vertical-center">
   <div class="row justify-content-around">
     <div class="col-sm-8 text-center"><b><%= @profil.name.capitalize %></b><br><br>
-      <div><%= @profil.description %>
+      <div class="text-left"><%= simple_format(@profil.description) %>
       </div><br><br>
             <div class="d-flex justify-content-around">
-        <a href="#" class="btn btn-ghost btn-lg active" role="button" aria-pressed="true">Contactez-nous</a>
+        <a href="/contact" class="btn btn-ghost btn-lg active" role="button" aria-pressed="true">Contactez-nous</a>
       </div>
     </div>
     <div class="col-sm-4">
