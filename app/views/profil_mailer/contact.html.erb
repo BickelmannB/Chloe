@@ -3,9 +3,9 @@
 <p>
   Une nouvelle demande vient d'arriver, et voici ce qu'elle contient : <br>
 
-  <b> Email de l'expediteur : <%= @email %> </b> <br>
-<% if @telephone %>
-<b> Téléphone de l'expediteur : <%= @telephone %> </b> <br>
+  <b> Email de l'expediteur : </b> <%= @contact.email %> <br><br>
+<% if @contact.telephone %>
+<b> Téléphone de l'expediteur :  </b> <%= @contact.telephone %> <br><br>
 <% end %>
-<b> Demande : <%= @demande %></b>
+<b> Demande : </b> <%= @contact.demande %>
 </p>

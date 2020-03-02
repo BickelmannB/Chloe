@@ -1,0 +1,12 @@
+<div class="text-left">
+  <%= simple_form_for @contact do |f| %>
+  <%= f.input :email, label: "Entrez votre email", required: true, hint: "Nous ne
+  partagerons jamais votre email" %>
+  <%= f.input :email2, label: "Entrez à nouveau votre email", required: true %>
+  <%= f.input :telephone, label: "Entrez votre numéro de téléphone", hint:"Nous utiliserons votre numéro uniquement pour vous recontacter dans le cadre de
+  votre demande" %>
+  <%= f.input :demande, label: " Ecrivez votre demande", required: true %>
+  <%= f.button :submit, "Envoyer", class: "btn btn-ghost" %> <br><br>
+  <p><i> * champs obligatoires </i></p>
+  <% end %>
+</div>

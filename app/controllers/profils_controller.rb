@@ -31,13 +31,13 @@ class ProfilsController < ApplicationController
   end
 end
 
-def contact
-  @profil = params[:profil]
-  @email = params[:email]
-  @telephone = params[:telephone]
-  @demande = params[:demande]
-  mail(to: @profil.email, subject: "Nouvelle demande d'information")
-end
+# def contact
+#   @profil = params[:profil]
+#   @email = params[:email]
+#   @telephone = params[:telephone]
+#   @demande = params[:demande]
+#   mail(to: @profil.email, subject: "Nouvelle demande d'information")
+# end
 
 private
 
