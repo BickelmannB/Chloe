@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_02_094455) do
+ActiveRecord::Schema.define(version: 2020_03_06_145732) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 2020_03_02_094455) do
     t.string "telephone"
     t.text "demande"
     t.string "email2"
+    t.string "email_contact", default: "toto@toto.fr"
   end
 
   create_table "formations", force: :cascade do |t|

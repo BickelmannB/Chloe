@@ -5,7 +5,7 @@
   <% @formations.each do |f| %>
   <a href="<%= formation_path(f) %>" style= text-decoration:none;>
     <% if f.photo.attached? %>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path f.photo.key %>')">
+    <div class="card-category container" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path f.photo.key %>')">
       <%= f.name.capitalize %>
     </div>
     <% end %>

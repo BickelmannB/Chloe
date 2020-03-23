@@ -1,13 +1,11 @@
 class ContactsController < ApplicationController
   def new
     @contact = Contact.new
-    @profil = Profil.where(name: "Annick")
   end
 
   def create
     @contact = Contact.new(contact_params)
-    @profil = Profil.where(name: "Annick")
-    if @contact.save
+    if @contact.save!
       ProfilMailer.contact(@contact).deliver_now
       flash[:success] = "Votre demande à bien été transmise,
        nous vous recontacterons dès que possible"
