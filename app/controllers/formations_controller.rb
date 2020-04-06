@@ -1,6 +1,6 @@
 class FormationsController < ApplicationController
   def index
-    @formations = Formation.all
+    @formations = Formation.all.order(:name)
   end
 
   def new

@@ -33,8 +33,13 @@
       </div>
     </div>
     <div class="container text-center center border border-solid border-black rounded custom-padding" id="cont-index">
-    <%= yield %>
-  </div>
+      <% flash.each do |type, msg| %>
+      <div class="alert alert-info">
+        <%= msg %>
+      </div>
+      <% end %>
+      <%= yield %>
+    </div>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
     <div class="container footer d-flex justify-content-center">

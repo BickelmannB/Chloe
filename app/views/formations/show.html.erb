@@ -1,7 +1,7 @@
 <div class="vertical-center">
   <div class="row justify-content-around">
     <div class="col-sm-8 text-center"><b><%= @formation.name.capitalize %></b><br><br>
-      <div><%= @formation.description %>
+      <div class="text-left"><%= simple_format(@formation.description) %>
       </div><br><br>
             <div class="d-flex justify-content-around">
         <a href="/contacts/new" class="btn btn-ghost btn-lg active" role="button" aria-pressed="true">Contactez-nous</a>
