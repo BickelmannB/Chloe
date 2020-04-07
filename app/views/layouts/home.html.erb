@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>TODO</title>
+    <title>Cabinet Cloe E.F.H.C</title>
+    <meta property="og:url" content="www.cabinet-cloe-efhc.com">
+    <meta name="description" content="Le Cabinet CLOE est une Ecole de Formations d’Hypnothérapeutes, PNL, Coaching situé à la Valentine dans le 11 ème arrondissement de Marseille.">
+    <meta property="og:title" content="Cabinet Cloe E.F.H.C">
+    <meta property="og:image" content="https://res.cloudinary.com/dyg8e1n4m/image/upload/v1581327061/logo_chloe_poflur.jpg">
+    <meta property="og:description" content="Le Cabinet CLOE est une Ecole de Formations d’Hypnothérapeutes, PNL, Coaching situé à la Valentine dans le 11 ème arrondissement de Marseille.">
+    <meta property="og:site_name" content="Cabinet Cloe E.F.H.C"/>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= favicon_link_tag asset_path('logo_chloe_poflur.ico') %>
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
   <body>
     <%= yield %>
     <%= javascript_include_tag 'application' %>
-
     <%= javascript_pack_tag 'application' %>
-  <div class="container footer d-flex justify-content-center">
-    <div class="footer-links">
-      <a href="#"><i class="fab fa-github"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-linkedin"></i></a>
+    <div class="container footer d-flex justify-content-center">
+      <div class="footer-links">
+        <a href="https://www.instagram.com/cabinet_cloe_efhc/"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/AnnickNiniCloe/"><i class="fab fa-facebook"></i></a>
+        <a href="https://twitter.com/AnnickBibaut"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/annick-bibaut-b8419672/"><i class="fab fa-linkedin"></i></a>
+      </div>
     </div>
-</div>
   </body>
 </html>
