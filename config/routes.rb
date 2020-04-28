@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root to: 'pages#home'
   get '/acceuil', to: "pages#acceuil"
-  resources :profils, only: [:index, :show, :edit, :update]
+  resources :profils, only: [:index, :show]
   resources :formations, only: [:index, :show]
   resources :contacts, only: [:new, :create]
 
