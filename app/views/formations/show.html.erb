@@ -5,6 +5,19 @@
       </div><br><br>
             <div class="d-flex justify-content-around">
         <a href="/contacts/new" class="btn btn-ghost btn-lg active" role="button" aria-pressed="true">Contactez-nous</a>
+        <% if @formation.name == "Bilan individuel de competences" %>
+          <a href="https://www.moncompteformation.gouv.fr/espace-prive/html/#/formation/recherche/84935804900013_15081/84935804900013_BCP001" class="btn btn-ghost btn-lg active" role="button" aria-pressed="true">Inscrivez-vous</a>
+        <% elsif @formation.name == "Hypnothérapeute"%>
+          <a href="https://www.moncompteformation.gouv.fr/espace-prive/html/#/formation/recherche/84935804900013_Hypnotherapeute/84935804900013_15081" class="btn btn-ghost btn-lg active" role="button" aria-pressed="true">Inscrivez-vous</a>
+        <% elsif @formation.name == "Technicien PNL" %>
+          <a href="https://www.moncompteformation.gouv.fr/espace-prive/html/#/formation/recherche/84935804900013_PNL/84935804900013_PNL" class="btn btn-ghost btn-lg active" role="button" aria-pressed="true">Inscrivez-vous</a>
+        <% elsif @formation.name == "Developpement personnel ( coaching )" %>
+          <a href="https://www.moncompteformation.gouv.fr/espace-prive/html/#/formation/recherche/84935804900013_PNL/84935804900013_PNL" class="btn btn-ghost btn-lg active" role="button" aria-pressed="true">Inscrivez-vous</a>
+        <% elsif @formation.name == "Psychopathologie Adulte/Enfant"%>
+          <a href="https://www.of.moncompteformation.gouv.fr/espace-prive/html/#/catalog/training/Psychopraticien/action/Psychopraticienmodule1" class="btn btn-ghost btn-lg active" role="button" aria-pressed="true">Inscrivez-vous</a>
+        <% elsif @formation.name == "Formation de Praticien en Psychothérapie"%>
+          <a href="https://www.moncompteformation.gouv.fr/espace-prive/html/#/formation/recherche/84935804900013_PSYCHOPRATICIENRELATIONNEL/84935804900013_PSYCHOPRATICIENRELATIONNEL" class="btn btn-ghost btn-lg active" role="button" aria-pressed="true">Inscrivez-vous</a>
+          <% end %>
       </div>
     </div>
     <div class="col-sm-4">
